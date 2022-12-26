@@ -1,12 +1,11 @@
 from flask import Flask, flash, redirect, url_for, request, render_template, session
 
 app = Flask(__name__)
-app.secret_key = 'hello'
+app.secret_key = 'flaskapp'
 
 @app.route('/success/<name>')
 def success(name):
    return render_template('myself.html')
-
 
 @app.route('/',methods = ['POST','GET'])
 def login():
